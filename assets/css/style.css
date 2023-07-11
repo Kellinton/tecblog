@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/*font-family: 'Poppins', sans-serif;*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif!important;
+}
+
+:root{
+    --titles: 2rem;
+    --logo: 5rem;
+}
+body{
+    display: grid;
+    place-items: center;
+}
+.site{
+    max-width: 1200px;
+}
+.container{
+    display: grid;
+    column-gap: 50px;
+    grid-template-areas: 
+        'cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho'
+        '. . principal links . .'
+        'rodape rodape rodape rodape rodape rodape';
+}
+.cabecalho{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    gap: 25px;
+    grid-area: cabecalho;
+    background-color: #f7b600;
+    margin-bottom: 5%;
+}
+
+.cabecalho header h1{
+    font-weight: 800;
+    font-size: var(--logo);
+    color: #4e4e4e;
+}
+.cabecalho header h1 span{
+    color: #fff;
+}
+
+.cabecalho nav ul{
+    display: flex;
+    gap: 50px;
+}
+
+.cabecalho nav ul li a{
+    font-weight: 500;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+}
+.cabecalho nav ul li a:hover{
+    color: #4e4e4e;
+}
+.principal{
+    grid-area: principal;
+    padding: 2%;
+}
+.principal section article h2{
+    font-size: var(--titles);
+    font-weight: 500;
+    color: #f7b600;
+    margin-bottom: 2%;
+}
+.principal section article p{
+    text-align: justify;
+    font-weight: 300;
+    margin-bottom: 5%;
+   width: 640px;
+}
+.links{
+    grid-area: links;
+
+}
+.links .links-postagens{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 2%;
+
+}
+.links .links-postagens h2{
+    color: #4e4e4e;
+    font-weight: 500;
+    font-size: var(--titles);
+    padding: 2%;
+    background-color: #9c9a9a;
+}
+.links .links-postagens a{
+    color: #f7b600;
+    text-decoration: none;
+}
+
+.links .links-categorias{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 2%;
+}
+.links .links-categorias h2{
+    color: #4e4e4e;
+    font-weight: 500;
+    font-size: var(--titles);
+    padding: 2%;
+    background-color: #9c9a9a;
+}
+.links .links-categorias ul li{
+    margin-bottom: 2%;
+}
+.links .links-categorias a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #f7b600;
+}
+.rodape{
+    grid-area: rodape;
+    background-color: #9c9a9a;
+}
+.rodape footer h2{
+    font-size: var(--titles);
+    text-align: center;
+    padding: 1%;
+}
